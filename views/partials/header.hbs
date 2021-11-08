@@ -1,0 +1,30 @@
+<header id="header">
+  <div class="flex-box">
+    <div id="nickname">
+      {{#if nickname}}
+        🐼
+        {{nickname}}
+      {{/if}}
+    </div>
+    <div class="logo">
+      <a href="../">
+        <img src="images/logo.png" alt="로고" />
+      </a>
+    </div>
+    <div id="my-menu">
+      {{#if nickname}}
+        <li><a href="#">MYPAGE</a></li>
+      {{else}}
+        <li><a href="login">LOGIN</a></li>
+      {{/if}}
+    </div>
+  </div>
+  <nav id="menu-bar">
+    <ul class="links">
+      <li><a href="plan" id="plan">PLAN</a></li>
+      <li><a href="notice" id="notice">NOTICE</a></li>
+      <li><a href="member" id="member">MEMBER</a></li>
+      <li><a href="snack" id="snack">SNACK</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
+@import "./footer.scss";
+
+@mixin contentBox {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+.login-content {
+  @include contentBox;
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  #header .logo {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+    img {
+      height: 70px;
+    }
+  }
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+    padding: 40px 40px 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    h2 {
+      font-size: 24px !important;
+      font-weight: 600;
+      margin: 0 0 10px;
+      padding: 0;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .divider {
+      margin-bottom: 30px;
+      width: 80px;
+      height: 4px;
+      background: #000;
+    }
+    input {
+      padding: 10px 20px;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 35px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      margin-bottom: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 4px;
+      border: none;
+      outline: none;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border-radius: 30px;
+      &:hover {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+    }
+  }
+}

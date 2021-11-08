@@ -1,0 +1,94 @@
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* header */
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 30px 0px;
+  box-sizing: border-box;
+  .flex-box {
+    display: flex;
+    width: 100%;
+    #nickname {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      font-size: 14px;
+      font-family: "KoPub Dotum";
+      color: #000;
+    }
+    .logo img {
+      height: 110px;
+    }
+    #my-menu {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      li {
+        display: flex;
+        height: 35px;
+        width: 80px;
+        border-radius: 25px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #b7b7b7;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        list-style: none;
+        color: #b7b7b7;
+        &:hover {
+          border-color: #e73b63;
+          a {
+            color: #e73b63;
+          }
+        }
+        a {
+          color: #b7b7b7;
+          font-size: 12px;
+          font-family: "KoPub Dotum";
+        }
+      }
+    }
+  }
+  #menu-bar {
+    margin-top: 30px;
+  }
+}
+
+#header #menu-bar .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: fit-content;
+  height: 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #e73b63;
+  background-color: #e73b63;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 14px 40px;
+  box-sizing: border-box;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+    &:hover {
+      a {
+        color: #000000;
+      }
+    }
+    a {
+      color: white;
+      font-family: "KoPub Dotum";
+    }
+  }
+}
