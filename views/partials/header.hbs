@@ -1,30 +1,14 @@
 <header id="header">
-  <div class="flex-box">
-    <div id="nickname">
-      {{#if nickname}}
-        🐼
-        {{nickname}}
-      {{/if}}
-    </div>
-    <div class="logo">
-      <a href="../">
-        <img src="images/logo.png" alt="로고" />
-      </a>
-    </div>
-    <div id="my-menu">
-      {{#if nickname}}
-        <li><a href="#">MYPAGE</a></li>
-      {{else}}
-        <li><a href="login">LOGIN</a></li>
-      {{/if}}
-    </div>
-  </div>
-  <nav id="menu-bar">
-    <ul class="links">
-      <li><a href="plan" id="plan">PLAN</a></li>
-      <li><a href="notice" id="notice">NOTICE</a></li>
-      <li><a href="member" id="member">MEMBER</a></li>
-      <li><a href="snack" id="snack">SNACK</a></li>
+  <a href="/"><img src="./images/menuLogo.png" alt="logo-img" /></a>
+  <nav class="menu-bar">
+    <ul class="menu-links">
+      <li class="menu-item"><a href="plan" id="plan">PLAN</a></li>
+      <li class="menu-item"><a href="notice" id="notice">NOTICE</a></li>
+      <li class="menu-item"><a href="member" id="member">MEMBER</a></li>
+      <li class="menu-item"><a href="snack" id="snack">SNACK</a></li>
     </ul>
   </nav>
+  <div class="login-btn">
+    <a href="login" id="login">LOGIN</a>
+  </div>
 </header>
