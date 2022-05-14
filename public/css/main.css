@@ -26,10 +26,20 @@ ul {
   padding: 12px 24px;
   box-sizing: border-box;
   background: #e73b63; }
-  #header img {
-    padding-right: 24px; }
+  @media (min-width: 360px) and (max-width: 767px) {
+    #header {
+      justify-content: center; } }
+  #header .logo {
+    margin-right: 24px; }
+    @media (min-width: 360px) and (max-width: 767px) {
+      #header .logo {
+        justify-self: center;
+        margin: 0; } }
   #header nav {
     flex: 1; }
+    @media (min-width: 360px) and (max-width: 767px) {
+      #header nav {
+        display: none; } }
     #header nav .menu-links {
       display: flex;
       align-items: center; }
@@ -43,11 +53,13 @@ ul {
           font-size: 16px;
           line-height: 16px;
           color: #fff;
-          font-weight: bold; }
+          font-weight: 400; }
       #header nav .menu-links .menu-item:hover {
         transition: 0.6s;
+        font-weight: bold;
         background: rgba(255, 255, 255, 0.9); }
         #header nav .menu-links .menu-item:hover a {
+          font-weight: bold;
           color: #e73b63; }
       #header nav .menu-links > .menu-item:not(:first-child) {
         margin-left: 8px; }
@@ -61,11 +73,16 @@ ul {
       font-size: 16px;
       line-height: 16px;
       color: #fff;
-      font-weight: bold; }
+      font-weight: 400; }
+    @media (min-width: 360px) and (max-width: 767px) {
+      #header .login-btn {
+        display: none; } }
   #header .login-btn:hover {
     transition: 0.6s;
+    font-weight: bold;
     background: rgba(255, 255, 255, 0.9); }
     #header .login-btn:hover a {
+      font-weight: bold;
       color: #e73b63; }
 
 /* footer */

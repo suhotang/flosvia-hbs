@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 a {
   padding: 0;
   margin: 0;
@@ -16,10 +18,30 @@ ul {
   }
 }
 
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
 @mixin menuItemHoverStyle {
   transition: 0.6s;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.9);
   a {
+    font-weight: bold;
     color: #e73b63;
   }
 }
@@ -34,7 +56,7 @@ ul {
     font-size: 16px;
     line-height: 16px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 400;
   }
 }
 
@@ -49,12 +71,22 @@ ul {
   padding: 12px 24px;
   box-sizing: border-box;
   background: #e73b63;
+  @include mobile {
+    justify-content: center;
+  }
 
-  img {
-    padding-right: 24px;
+  .logo {
+    margin-right: 24px;
+    @include mobile {
+      justify-self: center;
+      margin: 0;
+    }
   }
 
   nav {
+    @include mobile {
+      display: none;
+    }
     flex: 1;
     .menu-links {
       display: flex;
@@ -74,6 +106,9 @@ ul {
 
   .login-btn {
     @include menuItemStyle;
+    @include mobile {
+      display: none;
+    }
   }
   .login-btn:hover {
     @include menuItemHoverStyle;
