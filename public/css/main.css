@@ -26,18 +26,28 @@ ul {
   padding: 12px 24px;
   box-sizing: border-box;
   background: #e73b63; }
-  @media (min-width: 360px) and (max-width: 767px) {
+  @media (max-width: 959px) {
     #header {
       justify-content: center; } }
   #header .logo {
     margin-right: 24px; }
-    @media (min-width: 360px) and (max-width: 767px) {
+    @media (max-width: 959px) {
       #header .logo {
-        justify-self: center;
         margin: 0; } }
+  #header #menu-icon-btn {
+    position: absolute;
+    left: 24;
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0; }
+    @media (max-width: 959px) {
+      #header #menu-icon-btn {
+        display: flex; } }
   #header nav {
     flex: 1; }
-    @media (min-width: 360px) and (max-width: 767px) {
+    @media (max-width: 959px) {
       #header nav {
         display: none; } }
     #header nav .menu-links {
@@ -74,7 +84,7 @@ ul {
       line-height: 16px;
       color: #fff;
       font-weight: 400; }
-    @media (min-width: 360px) and (max-width: 767px) {
+    @media (max-width: 959px) {
       #header .login-btn {
         display: none; } }
   #header .login-btn:hover {

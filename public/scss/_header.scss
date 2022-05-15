@@ -19,19 +19,25 @@ ul {
 }
 
 @mixin mobile {
-  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileNTablet {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) {
+  @media (min-width: #{$breakpoint-tablet}) {
     @content;
   }
 }
@@ -71,20 +77,32 @@ ul {
   padding: 12px 24px;
   box-sizing: border-box;
   background: #e73b63;
-  @include mobile {
+  @include mobileNTablet {
     justify-content: center;
   }
 
   .logo {
     margin-right: 24px;
-    @include mobile {
-      justify-self: center;
+    @include mobileNTablet {
       margin: 0;
     }
   }
 
+  #menu-icon-btn {
+    position: absolute;
+    left: 24;
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    @include mobileNTablet {
+      display: flex;
+    }
+  }
+
   nav {
-    @include mobile {
+    @include mobileNTablet {
       display: none;
     }
     flex: 1;
@@ -106,7 +124,7 @@ ul {
 
   .login-btn {
     @include menuItemStyle;
-    @include mobile {
+    @include mobileNTablet {
       display: none;
     }
   }
