@@ -4,6 +4,7 @@ const path = require("path")
 const cookieParser = require("cookie-parser")
 const logger = require("morgan")
 const hbsSetting = require("./utils/hbsSetting")
+const hbsHelper = require("./utils/hbsHelper")
 const routes = require("./routes")
 const apiRoutes = require("./routes/api")
 
@@ -14,6 +15,7 @@ app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "hbs")
 
 hbsSetting(__dirname)
+hbsHelper()
 
 app.use(logger("dev"))
 app.use(express.json())

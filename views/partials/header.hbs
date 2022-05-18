@@ -1,7 +1,15 @@
 <header id="header">
-  <button type="button" id="menu-icon-btn">
+  <button type="button" class="notOpen" id="menu-icon-btn" onclick="onMenuClick()">
     <img src="./images/menuIcon.svg" alt="menu-icon" />
   </button>
+  <div id="full-menu-view">
+    <ul class="menu-links">
+      <li class="menu-item"><a href="plan" id="plan">PLAN</a></li>
+      <li class="menu-item"><a href="notice" id="notice">NOTICE</a></li>
+      <li class="menu-item"><a href="member" id="member">MEMBER</a></li>
+      <li class="menu-item"><a href="snack" id="snack">SNACK</a></li>
+    </ul>
+  </div>
   <a class="logo" href="/"><img src="./images/menuLogo.png" alt="logo-img" /></a>
   <nav class="menu-bar">
     <ul class="menu-links">

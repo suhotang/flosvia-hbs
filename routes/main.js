@@ -6,6 +6,7 @@ router.get("/", async function (req, res, next) {
   res.render("index", {
     title: "Flosvia",
     stylesheet: "/css/main.css",
+    jsfile: "javascripts/main.js",
   })
 })
 
