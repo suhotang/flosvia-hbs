@@ -97,38 +97,46 @@ ul {
 
 @keyframes fadeInDown {
   0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0); }
+    height: 0;
+    opacity: 0; }
   to {
-    opacity: 1;
-    transform: translateZ(0); } }
+    height: calc(100vh - 67px);
+    opacity: 1; } }
 
 @keyframes fadeOutUp {
   0% {
-    display: block;
-    opacity: 1;
-    transform: translateZ(0); }
+    height: calc(100vh - 67px);
+    opacity: 1; }
   to {
-    opacity: 0;
-    display: none;
-    transform: translate3d(0, -100%, 0); } }
+    height: 0;
+    opacity: 0; } }
 
 #full-menu-view {
   position: absolute;
-  top: 100px;
-  left: 100px;
-  width: 200px;
-  height: 200px;
-  background-color: #e73b63;
-  display: none; }
+  top: 67px;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background-color: #fff;
+  overflow: hidden;
+  background: #e73b63; }
+  #full-menu-view .menu-item, #full-menu-view #header nav .menu-links > .menu-item:not(:first-child), #header nav #full-menu-view .menu-links > .menu-item:not(:first-child) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 32px 0px;
+    border-bottom: 0.5px solid #fff; }
+    #full-menu-view .menu-item a, #full-menu-view #header nav .menu-links > .menu-item:not(:first-child) a, #header nav #full-menu-view .menu-links > .menu-item:not(:first-child) a {
+      font-size: 16px;
+      line-height: 16px;
+      color: #fff;
+      font-weight: 300; }
 
 #full-menu-view.open-full-menu-view {
-  display: block;
-  animation: fadeInDown 1s; }
+  animation: fadeInDown 0.5s forwards; }
 
 #full-menu-view.close-full-menu-view {
-  display: block;
-  animation: fadeOutUp 1s forwards; }
+  animation: fadeOutUp 0.5s forwards; }
 
 /* footer */
 #footer {
