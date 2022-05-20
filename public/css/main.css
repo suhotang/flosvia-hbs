@@ -36,12 +36,21 @@ ul {
         margin: 0; } }
   #header #menu-icon-btn {
     position: absolute;
-    left: 24;
+    left: 20;
     display: none;
     border: none;
     background: transparent;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    #header #menu-icon-btn:hover {
+      background-color: rgba(161, 41, 69, 0.3); }
     @media (max-width: 959px) {
       #header #menu-icon-btn {
         display: flex; } }
@@ -117,16 +126,17 @@ ul {
   left: 0;
   width: 100vw;
   height: 0;
-  background-color: #fff;
   overflow: hidden;
-  background: #e73b63; }
+  background: #eb6282; }
   #full-menu-view .menu-item, #full-menu-view #header nav .menu-links > .menu-item:not(:first-child), #header nav #full-menu-view .menu-links > .menu-item:not(:first-child) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 32px 0px;
-    border-bottom: 0.5px solid #fff; }
+    width: 100%; }
+    #full-menu-view .menu-item:hover, #full-menu-view #header nav .menu-links > .menu-item:hover:not(:first-child), #header nav #full-menu-view .menu-links > .menu-item:hover:not(:first-child) {
+      background-color: rgba(161, 41, 69, 0.3); }
     #full-menu-view .menu-item a, #full-menu-view #header nav .menu-links > .menu-item:not(:first-child) a, #header nav #full-menu-view .menu-links > .menu-item:not(:first-child) a {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 32px 0px;
       font-size: 16px;
       line-height: 16px;
       color: #fff;

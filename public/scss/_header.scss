@@ -90,12 +90,22 @@ ul {
 
   #menu-icon-btn {
     position: absolute;
-    left: 24;
+    left: 20;
     display: none;
     border: none;
     background: transparent;
     margin: 0;
     padding: 0;
+    width: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(161, 41, 69, 0.3);
+    }
     @include mobileNTablet {
       display: flex;
     }
@@ -128,6 +138,7 @@ ul {
       display: none;
     }
   }
+
   .login-btn:hover {
     @include menuItemHoverStyle;
   }
@@ -165,16 +176,18 @@ ul {
   left: 0;
   width: 100vw;
   height: 0;
-  background-color: #fff;
   overflow: hidden;
-  background: #e73b63;
+  background: #eb6282;
   .menu-item {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    padding: 32px 0px;
-    border-bottom: 0.5px solid #fff;
+    &:hover {
+      background-color: rgba(161, 41, 69, 0.3);
+    }
     a {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 32px 0px;
       font-size: 16px;
       line-height: 16px;
       color: #fff;
