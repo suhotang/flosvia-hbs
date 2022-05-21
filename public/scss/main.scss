@@ -14,10 +14,6 @@
   align-items: center;
 }
 
-body {
-  margin: 0;
-}
-
 .main-content {
   @include contentBox;
   .club-info-box {

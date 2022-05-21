@@ -1,46 +1,5 @@
 @import "./variables.scss";
-
-a {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  li {
-    color: #000;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: #{$breakpoint-mobile - 1px}) {
-    @content;
-  }
-}
-
-@mixin mobileNTablet {
-  @media (max-width: #{$breakpoint-tablet - 1px}) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$breakpoint-tablet}) {
-    @content;
-  }
-}
+@import "./responsive.scss";
 
 @mixin menuItemHoverStyle {
   transition: 0.6s;
@@ -48,7 +7,7 @@ ul {
   background: rgba(255, 255, 255, 0.9);
   a {
     font-weight: bold;
-    color: #e73b63;
+    color: $primary-color;
   }
 }
 
@@ -76,7 +35,8 @@ ul {
   width: 100%;
   padding: 12px 24px;
   box-sizing: border-box;
-  background: #e73b63;
+  background: $primary-color;
+
   @include mobileNTablet {
     justify-content: center;
   }
@@ -88,34 +48,12 @@ ul {
     }
   }
 
-  #menu-icon-btn {
-    position: absolute;
-    left: 20;
-    display: none;
-    border: none;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(161, 41, 69, 0.3);
-    }
-    @include mobileNTablet {
-      display: flex;
-    }
-  }
-
   nav {
+    flex: 1;
     @include mobileNTablet {
       display: none;
     }
-    flex: 1;
+
     .menu-links {
       display: flex;
       align-items: center;
@@ -141,6 +79,31 @@ ul {
 
   .login-btn:hover {
     @include menuItemHoverStyle;
+  }
+}
+
+// 모바일 뷰 관련 스타일 정의
+
+#menu-icon-btn {
+  position: absolute;
+  left: 20;
+  display: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $interaction-color;
+  }
+  @include mobileNTablet {
+    display: flex;
   }
 }
 
@@ -177,20 +140,22 @@ ul {
   width: 100vw;
   height: 0;
   overflow: hidden;
-  background: #eb6282;
+  background: $secondary-color;
+
   .menu-item {
     width: 100%;
     &:hover {
-      background-color: rgba(161, 41, 69, 0.3);
+      background-color: $interaction-color;
     }
+
     a {
       display: flex;
       justify-content: center;
       width: 100%;
+      color: #fff;
       padding: 32px 0px;
       font-size: 16px;
       line-height: 16px;
-      color: #fff;
       font-weight: 300;
     }
   }

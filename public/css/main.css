@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
-a {
-  padding: 0;
-  margin: 0;
-  text-decoration: none; }
-
-ul {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none; }
-  ul li {
-    color: #000;
-    padding: 0;
-    margin: 0; }
-
 /* header */
 #header {
   position: relative;
@@ -34,26 +19,6 @@ ul {
     @media (max-width: 959px) {
       #header .logo {
         margin: 0; } }
-  #header #menu-icon-btn {
-    position: absolute;
-    left: 20;
-    display: none;
-    border: none;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; }
-    #header #menu-icon-btn:hover {
-      background-color: rgba(161, 41, 69, 0.3); }
-    @media (max-width: 959px) {
-      #header #menu-icon-btn {
-        display: flex; } }
   #header nav {
     flex: 1; }
     @media (max-width: 959px) {
@@ -104,6 +69,27 @@ ul {
       font-weight: bold;
       color: #e73b63; }
 
+#menu-icon-btn {
+  position: absolute;
+  left: 20;
+  display: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  #menu-icon-btn:hover {
+    background-color: rgba(161, 41, 69, 0.3); }
+  @media (max-width: 959px) {
+    #menu-icon-btn {
+      display: flex; } }
+
 @keyframes fadeInDown {
   0% {
     height: 0;
@@ -136,10 +122,10 @@ ul {
       display: flex;
       justify-content: center;
       width: 100%;
+      color: #fff;
       padding: 32px 0px;
       font-size: 16px;
       line-height: 16px;
-      color: #fff;
       font-weight: 300; }
 
 #full-menu-view.open-full-menu-view {
@@ -158,9 +144,6 @@ ul {
     list-style: none;
     text-align: center;
     font-size: 15px; }
-
-body {
-  margin: 0; }
 
 .main-content {
   width: 100vw;
