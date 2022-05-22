@@ -1,5 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@keyframes fadeInDown {
+  0% {
+    height: 0;
+    opacity: 0; }
+  to {
+    height: calc(100vh - 67px);
+    opacity: 1; } }
+
+@keyframes fadeOutUp {
+  0% {
+    height: calc(100vh - 67px);
+    opacity: 1; }
+  to {
+    height: 0;
+    opacity: 0; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    display: flex; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    display: none; } }
+
 /* header */
 #header {
   position: relative;
@@ -77,34 +107,30 @@
   background: transparent;
   margin: 0;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   box-sizing: border-box;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   cursor: pointer; }
   #menu-icon-btn:hover {
     background-color: rgba(161, 41, 69, 0.3); }
   @media (max-width: 959px) {
     #menu-icon-btn {
       display: flex; } }
-
-@keyframes fadeInDown {
-  0% {
-    height: 0;
+  #menu-icon-btn .menuIconShow {
+    animation: fadeIn 1s forwards; }
+  #menu-icon-btn .menuIconHide {
+    animation: fadeOut 1s forwards; }
+  #menu-icon-btn #menuIcon {
+    position: absolute;
+    top: 11;
+    left: 12; }
+  #menu-icon-btn #menuCloseIcon {
+    position: absolute;
+    top: 13;
+    left: 14;
     opacity: 0; }
-  to {
-    height: calc(100vh - 67px);
-    opacity: 1; } }
-
-@keyframes fadeOutUp {
-  0% {
-    height: calc(100vh - 67px);
-    opacity: 1; }
-  to {
-    height: 0;
-    opacity: 0; } }
 
 #full-menu-view {
   position: absolute;

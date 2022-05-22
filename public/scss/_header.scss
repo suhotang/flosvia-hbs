@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./responsive.scss";
+@import "./animation.scss";
 
 @mixin menuItemHoverStyle {
   transition: 0.6s;
@@ -92,12 +93,11 @@
   background: transparent;
   margin: 0;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   box-sizing: border-box;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   cursor: pointer;
   &:hover {
     background-color: $interaction-color;
@@ -105,31 +105,24 @@
   @include mobileNTablet {
     display: flex;
   }
-}
 
-@keyframes fadeInDown {
-  0% {
-    height: 0;
-    opacity: 0;
-    //transform: translate3d(0, -100%, 0);
+  .menuIconShow {
+    animation: fadeIn 1s forwards;
   }
-  to {
-    height: calc(100vh - 67px);
-    opacity: 1;
-    //transform: translateZ(0);
+  .menuIconHide {
+    animation: fadeOut 1s forwards;
   }
-}
 
-@keyframes fadeOutUp {
-  0% {
-    height: calc(100vh - 67px);
-    opacity: 1;
-    //transform: translateZ(0);
+  #menuIcon {
+    position: absolute;
+    top: 11;
+    left: 12;
   }
-  to {
-    height: 0;
+  #menuCloseIcon {
+    position: absolute;
+    top: 13;
+    left: 14;
     opacity: 0;
-    //transform: translate3d(0, -20%, 0);
   }
 }
 
