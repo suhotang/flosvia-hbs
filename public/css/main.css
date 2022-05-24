@@ -180,22 +180,27 @@
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .main-content .club-info-box {
+  .main-content .swiper-container {
+    width: 100%; }
+  .main-content .swiper-slide {
+    width: 200px;
+    height: 280px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    filter: blur(4px); }
+    .main-content .swiper-slide .swiper-slide-shadow-left,
+    .main-content .swiper-slide .swiper-slide-shadow-right {
+      background-image: none; }
+  .main-content .swiper-slide-active {
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); }
+  .main-content .card-slider-container {
     flex: 1;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px; }
-    .main-content .club-info-box img {
-      width: 40%; }
-    .main-content .club-info-box .intro-text {
-      margin-top: 24px;
-      padding-bottom: 20px; }
-    .main-content .club-info-box .intro-text span {
-      text-align: center;
-      list-style: none;
-      color: #000;
-      font-size: 20px;
-      font-weight: 500;
-      font-family: "KoPub Dotum"; }
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden; }

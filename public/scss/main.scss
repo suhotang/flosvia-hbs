@@ -16,27 +16,34 @@
 
 .main-content {
   @include contentBox;
-  .club-info-box {
+  .swiper-container {
+    width: 100%;
+  }
+  .swiper-slide {
+    width: 200px;
+    height: 280px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    filter: blur(4px);
+
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      background-image: none;
+    }
+  }
+  .swiper-slide-active {
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  .card-slider-container {
     flex: 1;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    img {
-      width: 40%;
-    }
-    .intro-text {
-      margin-top: 24px;
-      padding-bottom: 20px;
-    }
-    .intro-text span {
-      text-align: center;
-      list-style: none;
-      color: #000;
-      font-size: 20px;
-      font-weight: 500;
-      font-family: "KoPub Dotum";
-    }
+    width: 100%;
+    overflow: hidden;
   }
 }
