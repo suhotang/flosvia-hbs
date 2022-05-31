@@ -31,7 +31,9 @@
 
 /* header */
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   font-family: "Inter", sans-serif;
   transition: 0.6s;
   display: flex;
