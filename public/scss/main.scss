@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 @import "./header.scss";
 @import "./footer.scss";
+@import "./animation.scss";
 
 @mixin contentBox {
   width: 100%;
@@ -76,9 +77,15 @@
 }
 
 .main-content .banner-section {
-  & > span {
+  overflow-x: hidden;
+  & > div {
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 100%;
+    padding-top: 6px;
     font-family: "Jua", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 32px;
+    animation: marquee 20s linear infinite;
   }
 }

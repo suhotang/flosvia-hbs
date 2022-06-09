@@ -43,3 +43,13 @@
     display: none;
   }
 }
+
+@keyframes marquee {
+  from {
+    transform: translate(0%);
+  }
+  99%,
+  to {
+    transform: translate(-100%);
+  }
+}
