@@ -33,10 +33,10 @@
 
 @keyframes marquee {
   from {
-    transform: translate(0%); }
+    transform: translate(50%); }
   99%,
   to {
-    transform: translate(-100%); } }
+    transform: translate(0%); } }
 
 /* header */
 #header {
@@ -214,10 +214,10 @@
 
 @keyframes marquee {
   from {
-    transform: translate(0%); }
+    transform: translate(50%); }
   99%,
   to {
-    transform: translate(-100%); } }
+    transform: translate(0%); } }
 
 .main-content {
   width: 100%;
@@ -280,10 +280,9 @@
   overflow-x: hidden; }
   .main-content .banner-section > div {
     white-space: nowrap;
-    width: 100%;
-    padding-left: 100%;
+    width: fit-content;
     padding-top: 6px;
     font-family: "Jua", sans-serif;
     font-size: 32px;
     line-height: 32px;
-    animation: marquee 20s linear infinite; }
+    animation: marquee 20s linear forwards; }

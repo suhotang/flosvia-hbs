@@ -80,12 +80,12 @@
   overflow-x: hidden;
   & > div {
     white-space: nowrap;
-    width: 100%;
-    padding-left: 100%;
+    width: fit-content;
+    //padding-left: 100%;
     padding-top: 6px;
     font-family: "Jua", sans-serif;
     font-size: 32px;
     line-height: 32px;
-    animation: marquee 20s linear infinite;
+    animation: marquee 20s linear forwards;
   }
 }

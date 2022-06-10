@@ -31,10 +31,10 @@
 
 @keyframes marquee {
   from {
-    transform: translate(0%); }
+    transform: translate(50%); }
   99%,
   to {
-    transform: translate(-100%); } }
+    transform: translate(0%); } }
 
 /* header */
 #header {
