@@ -40,6 +40,7 @@
   box-sizing: border-box;
   background: $primary-color;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 
   @include mobileNTablet {
     justify-content: center;
