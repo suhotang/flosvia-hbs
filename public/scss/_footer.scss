@@ -1,12 +1,20 @@
 /* footer */
 #footer {
-  margin: 30px 0;
+  width: 100%;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(4, 159, 108) 0%,
+    rgb(194, 254, 113) 90.1%
+  );
+  padding: 28px 36px 32px;
   .copyright li {
-    font-weight: bold;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    color: #fff;
     text-decoration: none;
     list-style: none;
-    text-align: center;
-    font-size: 15px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
