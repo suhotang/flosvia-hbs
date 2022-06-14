@@ -17,9 +17,11 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
+    "sequelize": "^6.20.1",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {

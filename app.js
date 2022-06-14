@@ -7,8 +7,10 @@ const hbsSetting = require("./utils/hbsSetting")
 const hbsHelper = require("./utils/hbsHelper")
 const routes = require("./routes")
 const apiRoutes = require("./routes/api")
+const sequelize = require("./models").sequelize
 
 const app = express()
+sequelize.sync()
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"))
