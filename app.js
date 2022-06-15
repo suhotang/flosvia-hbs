@@ -1,6 +1,7 @@
 const createError = require("http-errors")
 const express = require("express")
 const path = require("path")
+const dotenv = require("dotenv")
 const cookieParser = require("cookie-parser")
 const logger = require("morgan")
 const hbsSetting = require("./utils/hbsSetting")
@@ -8,6 +9,14 @@ const hbsHelper = require("./utils/hbsHelper")
 const routes = require("./routes")
 const apiRoutes = require("./routes/api")
 const sequelize = require("./models").sequelize
+
+if (process.env.NODE_ENV === "production") {
+  dotenv.config({ path: path.join(__dirname, ".env.production") })
+} else if (process.env.NODE_ENV === "develop") {
+  dotenv.config({ path: path.join(__dirname, ".env.develop") })
+} else {
+  throw new Error("process.env.NODE_ENV를 설정하지 않았습니다!")
+}
 
 const app = express()
 sequelize.sync()

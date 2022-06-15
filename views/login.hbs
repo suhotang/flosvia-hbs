@@ -12,8 +12,14 @@
       <div class="divider"></div>
       <input type="text" id="email-input" placeholder="아이디 입력" />
       <input type="password" id="pwd-input" placeholder="비밀번호 입력" />
-      <button type="button" onclick="login()">로그인</button>
+      <button id="login-submit-btn" type="button">로그인</button>
     </div>
   </div>
   {{> footer }}
 </div>
+<script type="module">
+  import { loginHandler } from "./javascripts/login.js"
+
+  const apiUrl = "{{getServerUrl}}"
+  loginHandler(apiUrl)
+</script>

@@ -1,6 +1,12 @@
-function login() {
-  const email = document.getElementById("email-input").value
-  const password = document.getElementById("pwd-input").value
+export function loginHandler(apiUrl) {
+  const loginBtnElement = document.getElementById("login-submit-btn")
+  loginBtnElement.addEventListener("click", () => {
+    console.log("click btn!")
 
-  // fetch
+    const email = document.getElementById("email-input").value
+    const password = document.getElementById("pwd-input").value
+    console.log(email, password)
+
+    // fetch
+  })
 }

@@ -1,7 +1,7 @@
 const path = require("path")
 const Sequelize = require("sequelize")
 
-const env = process.env.NODE_ENV || "development"
+const env = process.env.NODE_ENV || "develop"
 const config = require(path.join(__dirname, "..", "config", "config.json"))[env]
 const db = {}
 

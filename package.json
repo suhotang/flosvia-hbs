@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start:dev": "cross-env NODE_ENV=develop node ./bin/www",
     "sass": "node-sass public/scss/ -o public/css/",
     "sass:live": "node-sass public/scss/ -o public/css/ --watch",
     "tailwind": "postcss public/css/tailwind.css -o public/css/tailwindCompile.css",
@@ -12,7 +12,9 @@
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "cookie-parser": "~1.4.4",
+    "cross-env": "^7.0.3",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
