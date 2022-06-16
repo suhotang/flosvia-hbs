@@ -4,6 +4,8 @@ const path = require("path")
 const dotenv = require("dotenv")
 const cookieParser = require("cookie-parser")
 const logger = require("morgan")
+const passport = require("passport")
+const passportConfig = require("./passport")
 const hbsSetting = require("./utils/hbsSetting")
 const hbsHelper = require("./utils/hbsHelper")
 const routes = require("./routes")
@@ -28,6 +30,9 @@ app.set("view engine", "hbs")
 hbsSetting(__dirname)
 hbsHelper()
 
+// 인증을 위한 passport 설정
+app.use(passport.initialize())
+passportConfig()
 // margan(http req/res logging) logger 사용
 app.use(logger("dev"))
 // application/json의 Content-Type에 대해 파싱
