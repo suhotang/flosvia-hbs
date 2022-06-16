@@ -28,8 +28,11 @@ app.set("view engine", "hbs")
 hbsSetting(__dirname)
 hbsHelper()
 
+// margan(http req/res logging) logger 사용
 app.use(logger("dev"))
+// application/json의 Content-Type에 대해 파싱
 app.use(express.json())
+// application/x-www-form-urlencoded의 Content-Type에 대해 파싱
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")))

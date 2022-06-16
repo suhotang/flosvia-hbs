@@ -17,7 +17,7 @@ body {
 
 .login-content {
   @include contentBox;
-  background: url(../images/background.jpg) no-repeat center center fixed;
+  //background: url(../images/background.jpg) no-repeat center center fixed;
   #header .logo {
     display: flex;
     width: 100%;

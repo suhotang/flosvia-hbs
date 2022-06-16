@@ -174,7 +174,7 @@
 #footer {
   width: 100%;
   background: radial-gradient(circle at 10% 20%, #049f6c 0%, #c2fe71 90.1%);
-  padding: 28px 36px 32px; }
+  padding: 32px 36px 52px; }
   #footer .copyright li {
     font-weight: 400;
     font-family: "Inter", "Noto Sans KR", sans-serif;
@@ -236,7 +236,7 @@
     justify-items: center;
     width: 100%;
     max-width: 1200px;
-    padding: 72px 0 80px;
+    padding: 120px 0 132px;
     margin: 0;
     background: #fff;
     border: none;

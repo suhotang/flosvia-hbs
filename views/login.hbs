@@ -15,11 +15,10 @@
       <button id="login-submit-btn" type="button">로그인</button>
     </div>
   </div>
-  {{> footer }}
 </div>
 <script type="module">
-  import { loginHandler } from "./javascripts/login.js"
-
+  import { loginHandler } from "./javascripts/login.js" 
+  
   const apiUrl = "{{getServerUrl}}"
   loginHandler(apiUrl)
 </script>

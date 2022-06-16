@@ -2,7 +2,7 @@
 #footer {
   width: 100%;
   background: radial-gradient(circle at 10% 20%, #049f6c 0%, #c2fe71 90.1%);
-  padding: 28px 36px 32px; }
+  padding: 32px 36px 52px; }
   #footer .copyright li {
     font-weight: 400;
     font-family: "Inter", "Noto Sans KR", sans-serif;
@@ -24,8 +24,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: url(../images/background.jpg) no-repeat center center fixed; }
+  align-items: center; }
   .login-content #header .logo {
     display: flex;
     width: 100%;
