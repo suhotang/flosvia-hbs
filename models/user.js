@@ -4,7 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       email: { type: DataTypes.STRING(40), allowNull: false, unique: true },
       password: { type: DataTypes.STRING(100), allowNull: false },
-      name: { type: DataTypes.STRING(15), allowNull: false, unique: false },
+      name: { type: DataTypes.STRING(15), allowNull: false },
+      is_first: { type: DataTypes.BOOLEAN, defaultValue: true },
+      birth: { type: DataTypes.DATETIME, allowNull: true },
     },
     { timestamps: true, paranoid: true }
   )
