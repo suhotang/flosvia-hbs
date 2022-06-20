@@ -5,6 +5,10 @@
     "database": "testdb",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "define": {
+      "timestamps": true,
+      "freezeTableName": true
+    }
   }
 }

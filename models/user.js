@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
       password: { type: DataTypes.STRING(100), allowNull: false },
       name: { type: DataTypes.STRING(15), allowNull: false },
       is_first: { type: DataTypes.BOOLEAN, defaultValue: true },
-      birth: { type: DataTypes.DATETIME, allowNull: true },
+      birth: { type: DataTypes.DATE, allowNull: true },
     },
-    { timestamps: true, paranoid: true }
+    { paranoid: true }
   )
 }
