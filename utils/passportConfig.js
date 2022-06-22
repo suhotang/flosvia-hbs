@@ -2,13 +2,13 @@ const passport = require("passport")
 const { Strategy: LocalStrategy } = require("passport-local")
 const bcrypt = require("bcrypt")
 
-const User = require("../models/user")
+const { User } = require("../models")
 
-const config = { usernameField: "email", passwordField: "password" }
+const config = { usernameField: "email", passwordField: "password", session: false }
 
 const passportVerify = async (email, password, done) => {
   try {
-    const user = await User.findOne({ where: { email: email } })
+    const user = await User.findOne({ where: { email } })
     if (!user) {
       done(null, false, { message: "존재하지 않는 사용자 입니다." })
       return

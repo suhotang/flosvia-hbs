@@ -8,25 +8,26 @@ const { User } = require("../../models")
 const senderInfo = require("../../config/emailSendConfig.json")
 
 router.post("/signin", async function (req, res, next) {
-  // 1. req.body에서 email과 password를 받음
-  const email = req?.body?.email
-  const password = req?.body?.password
-  console.log(email, password)
+  try {
+    passport.authenticate("local", (error, user, _info) => {
+      if (error || !user) {
+        console.log(`Login failed with error: ${error}`)
+        return res.status(400).json({ message: "로그인에 실패하였습니다." })
+      }
 
-  // passport.authenticate("local", (error, user, info) => {
-  //   if (error) {
-  //     console.log(`Login failed with error: ${error}`)
-  //     return res.status(400).json({ message: ""})
-  //   }
+      return req.login(user, { session: false }, (loginError) => {
+        if (loginError) {
+          return res.status(400).json({ message: "로그인에 실패하였습니다." })
+        }
+        const token = jwt.sign({ id: user.id, name: user.name }, "jwt-secret-key")
 
-  //   if (!user) {
-
-  //   }
-  // })
-
-  res.json({
-    status: "success",
-  })
+        return res.status(200).json({ accessToken: token, message: "로그인 성공!" })
+      })
+    })(req, res)
+  } catch (e) {
+    console.log(e)
+    next(e)
+  }
 })
 
 router.post("/signup", async function (req, res, next) {
@@ -85,7 +86,7 @@ router.post("/signup", async function (req, res, next) {
     // return을 사용하지 않으면 연쇄 동작이 가능해짐 (res를 보내고 다른 미들웨어도 실행한다는 것)
     // https://stackoverflow.com/questions/43055600/app-get-is-there-any-difference-between-res-send-vs-return-res-send
     return res.json({
-      status: "success",
+      message: "회원가입 성공!",
     })
   } catch (e) {
     // TODO: logger 추가
