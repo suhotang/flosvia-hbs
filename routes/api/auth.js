@@ -21,6 +21,7 @@ router.post("/signin", async function (req, res, next) {
         }
         const token = jwt.sign({ id: user.id, name: user.name }, "jwt-secret-key")
 
+        res.cookie("cookieKey", "cookieValue", { maxAge: 900000, httpOnly: true })
         return res.status(200).json({ accessToken: token, message: "로그인 성공!" })
       })
     })(req, res)
