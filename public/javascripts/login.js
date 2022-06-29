@@ -28,16 +28,7 @@ export function loginHandler(apiUrl) {
         password,
       }),
     })
-      .then(async (response) => {
-        const data = await response.json()
-        const { accessToken, message } = data || {}
-
-        if (accessToken) {
-          console.log(parseJwt(accessToken))
-          localStorage.setItem("auth", JSON.stringify({ accessToken }))
-        }
-        alert(message)
-      })
+      .then(async (_res) => {})
       .catch((error) => {
         console.log(error)
         alert("로그인 실패!")

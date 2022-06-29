@@ -10,8 +10,14 @@ const snack = require("./snack")
 const notice = require("./notice")
 const login = require("./login")
 
+const authModule = (req, res, next) => {
+  const accessToken = req.cookies.accessToken
+  console.log(accessToken)
+  next()
+}
+
 router.use("/", main)
-router.use("/plan", plan)
+router.use("/plan", authModule, plan)
 router.use("/member", member)
 router.use("/snack", snack)
 router.use("/notice", notice)
