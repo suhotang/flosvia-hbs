@@ -28,7 +28,15 @@ export function loginHandler(apiUrl) {
         password,
       }),
     })
-      .then(async (_res) => {})
+      .then(async (response) => {
+        const data = await response.json()
+        const { message } = data || {}
+        alert(message)
+
+        if (response.status === 200) {
+          window.location.href = "/"
+        }
+      })
       .catch((error) => {
         console.log(error)
         alert("로그인 실패!")

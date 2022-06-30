@@ -22,7 +22,8 @@ router.post("/signin", async function (req, res, next) {
         const token = jwt.sign({ id: user.id, name: user.name }, "jwt-secret-key")
 
         res.cookie("accessToken", token, { maxAge: 900000, httpOnly: true })
-        return res.redirect("/")
+        // 바로 "/"로 리다이렉트 하려고 했는데 ajax post 요청은 url을 변경할 수 없다고 함
+        return res.status(200).json({ message: "로그인 성공!" })
       })
     })(req, res)
   } catch (e) {
