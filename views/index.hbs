@@ -1,7 +1,9 @@
 {{> header }}
 <main class="main-content">
   <section class="banner-section w-full shrink-0">
-    <div>여기는<br/>잡초 동아리<br/>FLOSVIA의<br/>웹페이지입니다.</div>
+    <div class="banner-text-box">
+      <span id="typed-text"></span>
+    </div>
   </section>
   <section class="menu-intro-section w-full flex-1 flex items-center justify-center">
     <div class="card-slider-container">
@@ -10,3 +12,13 @@
   </section>
   {{> footer }}
 </main>
+<script type="text/javascript">
+  const typed = new Typed("#typed-text", {
+		strings: ["여기는<br>잡초 동아리<br>FLOSVIA의<br>웹페이지입니다."],
+		typeSpeed: 120,
+		fadeOut: false,
+		smartBackspace: false,
+		cursorChar: "_",
+		loop: false
+	});
+</script>

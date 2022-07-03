@@ -53,3 +53,25 @@
     transform: translate(0%);
   }
 }
+
+/*
+@keyframes blinkCursor {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  30% {
+    //width: ;
+  }
+}
+*/

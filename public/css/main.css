@@ -36,6 +36,27 @@
   to {
     transform: translate(0%); } }
 
+/*
+@keyframes blinkCursor {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  30% {
+    //width: ;
+  }
+}
+*/
 /* header */
 #header {
   position: fixed;
@@ -222,6 +243,27 @@
   to {
     transform: translate(0%); } }
 
+/*
+@keyframes blinkCursor {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  30% {
+    //width: ;
+  }
+}
+*/
 .main-content {
   width: 100%;
   flex: 1;
@@ -283,18 +325,40 @@
   overflow-x: hidden;
   padding: 48px 72px 64px;
   background: rgba(0, 0, 0, 0.2); }
-  .main-content .banner-section > div {
+  .main-content .banner-section .banner-text-box {
     width: fit-content;
-    font-family: "Inter", "Noto Sans KR", sans-serif;
-    font-size: 32px;
-    line-height: 48px;
-    font-weight: 500;
-    text-align: left; }
-    @media (max-width: 599px) {
-      .main-content .banner-section > div {
-        font-size: 24px;
-        line-height: 28px; } }
-    @media (min-width: 600px) and (max-width: 959px) {
-      .main-content .banner-section > div {
-        font-size: 28px;
-        line-height: 32px; } }
+    /*
+    .banner-text::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 42px;
+      background: #000;
+      animation: blinkCursor 0.8s steps(3) infinite;
+    }
+    */ }
+    .main-content .banner-section .banner-text-box .typed-cursor {
+      font-size: 32px; }
+      @media (max-width: 599px) {
+        .main-content .banner-section .banner-text-box .typed-cursor {
+          font-size: 24px; } }
+      @media (min-width: 600px) and (max-width: 959px) {
+        .main-content .banner-section .banner-text-box .typed-cursor {
+          font-size: 28px; } }
+    .main-content .banner-section .banner-text-box #typed-text {
+      position: relative;
+      font-family: "Inter", "Noto Sans KR", sans-serif;
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 500;
+      text-align: left; }
+      @media (max-width: 599px) {
+        .main-content .banner-section .banner-text-box #typed-text {
+          font-size: 24px;
+          line-height: 28px; } }
+      @media (min-width: 600px) and (max-width: 959px) {
+        .main-content .banner-section .banner-text-box #typed-text {
+          font-size: 28px;
+          line-height: 32px; } }
