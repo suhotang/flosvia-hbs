@@ -325,20 +325,14 @@
   overflow-x: hidden;
   padding: 48px 72px 64px;
   background: rgba(0, 0, 0, 0.2); }
+  @media (max-width: 599px) {
+    .main-content .banner-section {
+      padding: 32px 42px 36px; } }
+  @media (min-width: 600px) and (max-width: 959px) {
+    .main-content .banner-section {
+      padding: 40px 56px 46px; } }
   .main-content .banner-section .banner-text-box {
-    width: fit-content;
-    /*
-    .banner-text::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 2px;
-      height: 42px;
-      background: #000;
-      animation: blinkCursor 0.8s steps(3) infinite;
-    }
-    */ }
+    width: fit-content; }
     .main-content .banner-section .banner-text-box .typed-cursor {
       font-size: 32px; }
       @media (max-width: 599px) {
@@ -357,8 +351,8 @@
       @media (max-width: 599px) {
         .main-content .banner-section .banner-text-box #typed-text {
           font-size: 24px;
-          line-height: 28px; } }
+          line-height: 36px; } }
       @media (min-width: 600px) and (max-width: 959px) {
         .main-content .banner-section .banner-text-box #typed-text {
           font-size: 28px;
-          line-height: 32px; } }
+          line-height: 40px; } }
